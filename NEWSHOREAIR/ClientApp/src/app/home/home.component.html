@@ -1,0 +1,20 @@
+<div class="search-bar">
+  <div class="card">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <input type="text" class="form-control" id="departureInput" placeholder="Departure" maxlength="3" [(ngModel)]="origin">
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" id="arrivalInput" placeholder="Arrival" maxlength="3"[(ngModel)]="destination">
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" id="MaxFlights" placeholder="Max Flights"[(ngModel)]="maxFlights">
+        </div>
+        <div class="col">
+          <button type="button" [routerLink]="['fetch-data', origin,destination,maxFlights]" class="btn btn-primary" >Primary</button>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>

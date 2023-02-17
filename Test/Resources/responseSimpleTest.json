@@ -1,0 +1,16 @@
+[{
+  "DepartureStation": "MZL",
+  "ArrivalStation": "JFK",
+  "FlightCarrier": "AV",
+  "FlightNumber": "8020",
+  "Price": 1000.0
+},
+ {
+ "DepartureStation": "JFK",
+ "ArrivalStation": "BCN",
+ "FlightCarrier": "AV",
+ "FlightNumber": "8040",
+ "Price": 1000.0,
+ }
+]
+

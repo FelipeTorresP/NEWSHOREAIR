@@ -1,0 +1,42 @@
+<h1 id="tableLabel">Journeys</h1>
+
+<p *ngIf="!journeys?.length"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="journeys.length">
+  <thead>
+    <tr>
+      <th>flights</th>
+      <th>origin</th>
+      <th>destination</th>
+      <th>price</th>
+      <th>currency</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let journey of journeys">
+      <td>
+        <tr *ngFor="let flights of journey.flights">
+          <td>{{ flights.origin }}</td>
+          <td>{{ flights.destination }}</td>
+          <td>{{ flights.price }}</td>
+          <td>{{ flights.transport.flightCarrier }}</td>
+          <td>{{ flights.transport.flightNumber }}</td>
+
+
+        </tr>
+      </td>
+      <td>{{ journey.origin }}</td>
+      <td>{{ journey.destination }}</td>
+      <td>{{ journey.price }} </td>
+      <td><select class="form-select form-select-lg mb-2" id="currency" [(ngModel)]="currency" (change)="multiplyValue(journey)">
+        <option value="USD">USD</option>
+        <option value="COP">COP</option>
+        <option value="MEX">MEX</option>
+        <option value="YEN">YEN</option>
+
+      </select></td>
+
+    </tr>
+  </tbody>
+</table>
